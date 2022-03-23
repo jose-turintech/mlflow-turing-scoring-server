@@ -1,0 +1,8 @@
+# .coveragerc to control coverage.py
+[run]
+branch = True
+omit =
+    ../src/__about__.py
+    ../src/mlflow_turing_scoring_server/conf/base_default_conf.py
+    ../src/mlflow_turing_scoring_server_rest/conf/costum_logging.py
+

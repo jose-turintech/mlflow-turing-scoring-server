@@ -1,0 +1,25 @@
+# Changelog
+
+---
+
+Here you can find the recent changes to mlflow_turin_scoring_server..
+
+.. changelog::
+    :version: dev
+    :released: Ongoing
+
+    .. change::
+        :tags:  docs
+
+        Updated CHANGES.
+
+.. changelog::
+    :version: 0.0.0
+    :released: 2022-03-22
+
+    .. change::
+        :tags: project
+
+        First release on PyPi.
+
+.. todo:: vim: set filetype=rst:
