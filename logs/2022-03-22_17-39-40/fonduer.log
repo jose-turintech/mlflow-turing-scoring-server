@@ -1,4 +1,0 @@
-[2022-03-22 17:39:40,920][INFO] fonduer.meta:51 - Setting logging directory to: logs/2022-03-22_17-39-40
-[2022-03-22 17:39:40,922][INFO] emmental.meta:122 - Setting logging directory to: /tmp/2022_03_22/17_39_40/42c4b0cc
-[2022-03-22 17:39:40,934][INFO] emmental.meta:64 - Loading Emmental default config from /home/jose/.conda/envs/mlflow-e89b0f6e4d268e627048ce928375f2828a58c26f/lib/python3.8/site-packages/emmental/emmental-default-config.yaml.
-[2022-03-22 17:39:40,934][INFO] emmental.utils.seed:30 - No random seed specified, randomly set random seed to 2406498145.
