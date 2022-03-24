@@ -37,7 +37,7 @@ class NginxProcessService:
 
                 print("Trying to kill process: "+pid)
                 # terminating process
-                #Popen(["kill", "-9", pid])
+                Popen(["kill", "-9", pid])
                 # os.kill(int(pid), signal.SIGKILL)
             print("Process Successfully terminated")
             return_value = False
