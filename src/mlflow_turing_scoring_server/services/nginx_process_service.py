@@ -22,23 +22,7 @@ class NginxProcessService:
         name = "nginx"
         return_value = False
         try:
-
-            # iterating through each instance of the process
-            nginxProcesses = os.popen("ps ax | grep " + name + " | grep -v grep")
-            print("Nginx processes: ")
-
-            for line in nginxProcesses:
-                print(line)
-                fields = line.split()
-
-                # extracting Process ID from the output
-                pid = fields[0]
-
-                print("Trying to kill process: "+pid)
-                # terminating process
-                Popen(["kill", "-9", pid])
-                # os.kill(int(pid), signal.SIGKILL)
-                print("Process terminated with pid: "+pid)
+            Popen(["nginx", "-s", "stop"])
             print("Processes Successfully terminated")
             return_value = False
         except:
