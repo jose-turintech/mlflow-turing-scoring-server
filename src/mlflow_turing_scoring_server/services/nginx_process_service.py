@@ -26,10 +26,9 @@ class NginxProcessService:
             # iterating through each instance of the process
             nginxProcesses = os.popen("ps ax | grep " + name + " | grep -v grep")
             print("Nginx processes: ")
-            for line in nginxProcesses:
-                print(line)
 
             for line in nginxProcesses:
+                print(line)
                 fields = line.split()
 
                 # extracting Process ID from the output
@@ -39,7 +38,8 @@ class NginxProcessService:
                 # terminating process
                 Popen(["kill", "-9", pid])
                 # os.kill(int(pid), signal.SIGKILL)
-            print("Process Successfully terminated")
+                print("Process terminated with pid: "+pid)
+            print("Processes Successfully terminated")
             return_value = False
         except:
             print("Error Encountered while running script")
@@ -50,5 +50,7 @@ class NginxProcessService:
         nginx_conf = resource_filename(
             mlflow_turing_scoring_server.__name__, "scoring_server/nginx.conf"
         )
+        print("Location of the new nginx conf file:")
+        print(nginx_conf)
 
         Popen(["nginx", "-c", nginx_conf])
