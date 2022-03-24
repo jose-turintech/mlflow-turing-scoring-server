@@ -37,8 +37,6 @@ from mlflow.utils.proto_json_utils import (
     parse_tf_serving_input,
 )
 
-# from mlflow_turing_scoring_server.services.nginx_process_service import NginxProcessService
-
 try:
     from mlflow.pyfunc import load_model, PyFuncModel
 except ImportError:
@@ -218,10 +216,6 @@ def init(model: PyFuncModel):
     """
     app = flask.Flask(__name__)
     input_schema = model.metadata.get_input_schema()
-
-    # Some kinky stuff just to kill existing running process of nginx and re-run nginx with custom configuration.
-    # nginx_service: NginxProcessService = NginxProcessService()
-    # nginx_service.manage_custom_nginx()
 
     @app.route("/ping", methods=["GET"])
     def ping():  # pylint: disable=unused-variable
