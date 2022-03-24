@@ -1,4 +1,5 @@
 import os, signal
+import time
 from subprocess import Popen
 
 from pkg_resources import resource_filename
@@ -20,4 +21,5 @@ class NginxProcessService:
         print("Location of the new nginx conf file:")
         print(nginx_conf)
         Popen(["sed", "-i", "'s/invocations/invocations|turing/g'", "/", nginx_conf])
+        time.sleep(1)
         Popen(["nginx", "-s", "reload", "-c", nginx_conf, "-t"])
