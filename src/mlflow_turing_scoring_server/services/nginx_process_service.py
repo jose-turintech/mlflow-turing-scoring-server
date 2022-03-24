@@ -9,7 +9,7 @@ import mlflow_turing_scoring_server
 class NginxProcessService:
 
     def manage_custom_nginx(self):
-        print("Managin custom nginx processes.")
+        print("Managing custom nginx processes.")
         result = self.kill_running_nginx()
         if result:
             self.start_nginx_process()
@@ -30,8 +30,10 @@ class NginxProcessService:
                 # extracting Process ID from the output
                 pid = fields[0]
 
+                print("Trying to kill process: "+pid)
                 # terminating process
-                os.kill(int(pid), signal.SIGKILL)
+                Popen(["kill", "-9", pid])
+                # os.kill(int(pid), signal.SIGKILL)
             print("Process Successfully terminated")
             return_value = True
         except:
