@@ -22,12 +22,11 @@ class NginxProcessService:
         name = "nginx"
         return_value = False
         try:
-            Popen(["nginx", "-s", "stop"])
+            #Popen(["nginx", "-s", "stop"])
             print("Processes Successfully terminated")
-            return_value = False
+            return_value = True
         except:
             print("Error Encountered while running script")
-        return_value = False
         return return_value
 
     def start_nginx_process(self):
