@@ -9,6 +9,6 @@ try:
     service: NginxProcessService = NginxProcessService()
     service.manage_custom_nginx()
 except BaseException:
-    print("Some error happened, coninuing")
+    print("Some error happened, contnuing")
 
 app = scoring_server.init(load_model(os.environ[scoring_server._SERVER_MODEL_PATH]))
