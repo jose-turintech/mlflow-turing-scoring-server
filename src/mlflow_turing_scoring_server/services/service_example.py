@@ -5,7 +5,7 @@ from mlflow_turing_scoring_server.conf.conf_manager import conf_mgr
 
 class ServiceExample:
     def __init__(self):
-        logger.info("Created new a ServiceExample instance")
+        logger.info("Created a new ServiceExample instance")
 
     @property
     def env_file(self):
