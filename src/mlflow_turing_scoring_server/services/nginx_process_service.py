@@ -9,9 +9,13 @@ import mlflow_turing_scoring_server
 class NginxProcessService:
 
     def manage_custom_nginx(self):
+        print("Managin custom nginx processes.")
         result = self.kill_running_nginx()
         if result:
             self.start_nginx_process()
+        else:
+            print("No nginx process found running.")
+
 
     def kill_running_nginx(self) -> bool:
         # Ask user for the name of process
