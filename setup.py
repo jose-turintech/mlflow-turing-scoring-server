@@ -145,7 +145,7 @@ setup(
     # Add the data files included in the "/src" packages
     package_data={
         # "/src/*"
-        "mlflow_turing_scoring_server": ["scoring_server/nginx.conf"]
+        'mlflow_turing_scoring_server': ["scoring_server/*.conf"]
     },
 
     scripts=[
